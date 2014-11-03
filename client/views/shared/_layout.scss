@@ -1,0 +1,57 @@
+
+html, body {
+  height: 100%;
+}
+
+.columns {
+  overflow: hidden;
+}
+
+.column {
+  float: left;
+  padding: 10px;
+  &.fourth {
+    width: 25%;
+  }
+  &.half {
+    width: 50%;
+    @media (max-width: 860px) {
+      width: 75%;
+    }
+  }
+  &.third {
+    width: 40%;
+  }
+  &.two-thirds {
+    width: 60%;
+    @media (max-width: 860px) {
+      width: 79%;
+    }
+  }
+  &.last {
+    float: right;
+    padding-left: 0;
+    @media (max-width: 860px) {
+      float: left;
+      padding-left: 10px;
+      width: 75%;
+    }
+  }
+}
+
+
+.video-container {
+  position: relative;
+  padding-bottom: 56%;
+  padding-top: 35px;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container .video {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

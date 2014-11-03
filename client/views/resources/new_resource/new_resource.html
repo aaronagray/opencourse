@@ -1,0 +1,35 @@
+<template name="NewResource">
+  <header class="page-header">
+    <h1 class="page-title">New Resource</h1>
+  </header>
+  <section class="item-form">
+    {{#autoForm collection="Resources" id="newResourceFrom" type="insert"}}
+      {{> afFieldLabel name="title"}}
+      {{> afFieldInput name="title"}}
+
+      {{> afFieldLabel name="url"}}
+      {{> afFieldInput name="url"}}
+
+      {{> afFieldLabel name="action"}}
+      {{> afFieldInput name="action" options=selectActionOptions}}
+
+      {{#if fromCourse}}
+        {{> afFieldLabel name="topic"}}
+        {{> afFieldInput name="topic" options=courseSubjectOptions firstOption="Select Subject"}}
+
+        {{> afFieldLabel name="course"}}
+        {{> afFieldInput name="course" options=selectCourseOptions}}
+      {{else}}
+        {{> afFieldLabel name="course"}}
+        {{> afFieldInput name="course" options=selectCourseOptions firstOption="Select Course"}}
+      {{/if}}
+
+      {{> afFieldLabel name="cost"}}
+      {{> afFieldInput name="cost" }}
+
+      {{> afFieldInput name="user" value=userId type="hidden"}}
+      <button type="submit">Update Resource</button>
+    {{/autoForm}}
+  </section>
+</template>
+

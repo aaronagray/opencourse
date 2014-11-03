@@ -1,0 +1,30 @@
+<template name="CoursesIndex">
+  <header class="page-header">
+    <h2 class="page-title">Courses</h2>
+    {{#if currentUser }}
+      <a class="button" href="{{pathFor 'new.course'}}">New Course</a>
+    {{/if}}
+  </header>
+  <section class="courses column half">
+  {{#momentum plugin='growl'}}
+  {{#each courses}}
+    <article class="course item">
+      <div class="item-content">
+        <header class="item-header">
+          <h2 class="item-title"><a href="{{pathFor 'course.single'}}">{{title}}</a></h2>
+          {{#with tax}}
+            <span class="item-tax">{{category}} / {{subject}}</span>
+          {{/with}}
+        </header>
+        {{#if hasPrivs . }}
+          <div class="item-controls">
+            <a class="controll" href="{{pathFor 'edit.course'}}" ><i class="fa fa-edit"></i></a>
+            <i class="fa fa-close" data-action="remove" data-item="{{_id}}" data-type="course"></i>
+          </div>
+        {{/if}}
+      </div>
+    </article>
+  {{/each}}
+  {{/momentum}}
+  </section>
+</template>

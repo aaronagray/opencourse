@@ -1,0 +1,63 @@
+/*****************************************************************************/
+/* DashNav: Style */
+/*****************************************************************************/
+
+.avatar {
+  border-radius: 8% 30%; 
+  max-width: 100%;
+  height: auto;
+  padding: 10px 15px;
+}
+
+.dash-nav-container {
+  width: 20%;
+  float: left;
+  height: 100%; // relates to html, body { height: 100%; }
+  background: $purple;
+}
+
+.dash-nav-buttons  {
+  text-align: center;
+}
+
+.sign-in-panel {
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: white;
+  text-align: center;
+}
+
+// XXX This needs to be a freaking class.
+#login-dropdown-list {
+  position: relative;
+  top: -17px; left: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: none;
+  background: $purple;
+  color: white;
+  padding: 0; margin: 0;
+  width: auto; max-width: 100%;
+  box-shadow: none; -webkit-box-shadow: none;
+
+  .login-close-text {
+    float: none;
+    line-height: 2.6;
+  }
+
+  input {
+    color: black;
+  }
+}
+
+// XXX This to.
+#login-buttons {
+  display: block;
+  text-align: center;
+  font-size: 1.563rem;
+  a {
+    color: $orange;
+  }
+}

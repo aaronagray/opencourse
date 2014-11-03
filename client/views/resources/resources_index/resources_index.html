@@ -1,0 +1,35 @@
+<template name="ResourcesIndex">
+  <header class="page-header">
+      <h2 class="page-title">Resources</h2>
+      <a class="button" href="{{pathFor 'new.resource'}}">Add Resource</a>
+  </header>
+  <aside class="column fourth last">
+    <h2>About Resources</h2>
+    <article class="copy">
+      <p>A resource is any guided instruction on the internet. It may be a video on YouTube, article on a blog post, or a project to be complete. When course designers add a resource to a Course, it is also included here.</p>
+      <p>Soon you will be able to filter resources by subject and add them directly to your own course from here.</p>
+    </article>
+
+  </aside>
+  <section class="resources column half">
+  {{#momentum plugin='growl'}}
+  {{#each resources}}
+    <article class="resource item {{#if complete}} completed {{/if}}">
+      <div class="item-content">
+          {{#if hasPrivs . }}
+            <div class="item-controls">
+              <a class="action" href="{{pathFor 'edit.resource'}}"><i class="fa fa-edit">Edit</i></a>
+              <i class="fa fa-close" data-action="remove" data-item="{{_id}}" data-type="resource">Delete</i>
+            </div>
+          {{/if}}
+          <i class="kind fa fa-{{action}}"></i>
+          <a href="{{pathFor 'resource.single'}}"><h2 class="item-title">{{title}}</h2></a>
+          {{#if topic}}
+            <button class="item-topic">{{topic}}</button>
+          {{/if}}
+      </div>
+    </article>
+    {{/each}}
+    {{/momentum}}
+  </section>
+</template>

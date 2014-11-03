@@ -1,0 +1,33 @@
+<template name="ResourceSingle">
+  {{#with resource}}
+
+    <header class="page-header">
+      <i class="kind fa fa-{{action}}"></i>
+      <h1 class="page-title">{{title}}</h1>
+    </header>
+
+    <aside class="column fourth last">
+      <p>URL: {{url}}</p>
+      <p>Course: {{course}}</p>
+      <p>Cost: {{cost}}</p>
+    </aside>
+
+    <section class="column half">
+
+      {{#if isVideo}}
+        <article class="video-container">
+          {{#if isYouTube}}
+            <iframe class="video" src="//www.youtube.com/embed/{{youtube}}?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+          {{/if}}
+          {{#if isVimeo}}
+            <iframe src="//player.vimeo.com/video/{{vimeo}}" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          {{/if}}
+        </article>
+      {{/if}}
+
+      {{>disqus}}
+
+    </section>
+  {{/with}}
+</template>
+

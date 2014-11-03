@@ -1,0 +1,41 @@
+
+form {
+  max-width: 50%;
+  margin-left: 10px;
+}
+
+.item-form {
+  width: 50%;
+  float: left;
+}
+
+input {
+  display: block;
+  border: 1px solid rgba($blue, 0.5);
+  border-radius: 2px;
+  width: 100%;
+  max-width: 100%;
+}
+
+input, textarea {
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+label {
+  display: block;
+  font-size: 1.25rem;
+}
+
+.list-group-item {
+  overflow: hidden;
+}
+
+.autoform-add-item, .autoform-remove-item {
+  float: left;
+}
+
+// XXX
+// Add and remove icons are hacked in font-awesome because
+// I am on a flight and don't have wifi to find out how autoform
+// expects me to change button classes.

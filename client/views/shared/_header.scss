@@ -1,0 +1,25 @@
+
+.site-header {
+  background: $blue;
+  overflow: hidden;
+  padding: 10px;
+  border-bottom: 1px solid rgba($black,0.09);
+  a {
+    color: white;
+  }
+
+}
+.site-logo {
+  font-size: 5rem;
+  float: left;
+}
+
+.site-navigation {
+  padding-top: 15px;
+  float: left;
+  width: 50%;
+  a {
+    margin-left: 20px;
+    font-size: 1.4rem;
+  }
+}

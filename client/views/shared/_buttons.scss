@@ -1,0 +1,63 @@
+
+button {
+  display: block;
+  border-radius: 3px;
+  background: rgba($black,1.0);
+  color: white;
+  border: 0;
+  padding: 5px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.button {
+  background: white;
+  padding: 7px;
+  color: black;
+  font-size: 1.1rem;
+}
+
+.button-dash {
+  display: block;
+  background: $purple;
+  color: white;
+  padding: 10px;
+  padding-left: 20px;
+  &.active {
+    background: white;
+    color: $purple;
+  }
+}
+
+.page-header .button {
+  float: left;
+  background: $orange;
+  color: white;
+  border-radius: 3px;
+  margin-left: 20px;
+}
+
+.complete-action {
+  float: left;
+  margin-right: 25px;
+  background: $green;
+}
+
+.undo-action {
+  float: left;
+  margin-right: 20px;
+}
+
+.sort-button {
+  padding: 3px;
+}
+
+.topics {
+  overflow: hidden;
+}
+
+.action {
+  color: $black;
+}

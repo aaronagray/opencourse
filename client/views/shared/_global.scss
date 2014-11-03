@@ -1,0 +1,28 @@
+.page-header {
+  background: rgba($purple, 1.0);
+  overflow: hidden;
+  color: white;
+  padding: 10px 10px 10px 0;
+}
+
+.page-title {
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  float: left;
+  font-size: 1.953rem;
+  font-variant: small-caps;
+}
+
+.site-page {
+  color: white;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 20px;
+  background: $black;
+  height: 100%;
+}
+
+.site-page-hero {
+  max-width: 90%;
+  margin: 0 auto;
+}

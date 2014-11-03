@@ -1,0 +1,20 @@
+
+<template name="NewCourse">
+  <header class="page-header">
+      <h2 class="page-title">New Course</h2>
+  </header>
+<section class="item-form">
+  {{#autoForm collection="Courses" id="newCourseFrom" type="insert"}}
+    {{> afFieldLabel name="title"}}
+    {{> afFieldInput name="title"}}
+
+    {{> afFieldLabel name="description"}}
+    {{> afFieldInput name="description"}}
+
+    {{> afFieldInput name="user" value=userId type="hidden"}}
+    <button type="submit">Create Course</button>
+  {{/autoForm}}
+
+</section>
+</template>
+

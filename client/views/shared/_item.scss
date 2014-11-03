@@ -1,0 +1,82 @@
+.item {
+  overflow: hidden;
+  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.2);
+  padding: 10px;
+  padding-bottom: 9px;
+  margin-bottom: 10px;
+  border-radius: 2px;
+  transition: background 110ms ease;
+}
+
+.course-content {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.fa.kind {
+  font-size: 2.9rem;
+  float: left;
+  padding-right: 10px;
+}
+
+.item.completed {
+  opacity: 0.4;
+  background: white;
+  .item-title {
+    text-decoration: line-through;
+  }
+}
+
+.item-topic {
+  float: left;
+  margin-right: 10px;
+  background: white;
+  color: black;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+}
+
+.item-title {
+  float: left;
+  margin-right: 10px;
+}
+
+.item-tax {
+  line-height: 3.1;
+}
+
+.item-content {
+  width: 100%;
+  overflow: hidden;
+}
+.item:hover {
+  background: $purple;
+  color: white;
+
+  a {
+    color: white;
+  }
+}
+
+.item-controls .fa {
+  padding-left: 10px;
+  font-size: 1.3rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+.item-header {
+  float: left;
+}
+
+.item-actions, .item-controls {
+  float: right;
+}
+
+.item-meta {
+  overflow: hidden;
+}
+
+.item-controls .fa:before {
+  padding-right: 3px;
+}

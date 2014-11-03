@@ -1,0 +1,20 @@
+/*****************************************************************************/
+/* Global CSS Styles */
+/*****************************************************************************/
+
+@import "views/shared/reset";
+@import "views/shared/colors";
+@import "views/shared/type";
+@import "views/shared/item";
+@import "views/shared/summary";
+@import "views/shared/global";
+@import "views/shared/forms";
+@import "views/shared/buttons";
+@import "views/shared/header";
+@import "views/shared/layout";
+@import "views/shared/dash_nav/dash_nav";
+
+body {
+  background: white;
+  color: $black;
+}

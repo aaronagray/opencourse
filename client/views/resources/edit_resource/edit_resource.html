@@ -1,0 +1,27 @@
+<template name="EditResource">
+  <section class="item-form">
+  {{#with resource}}
+    {{#autoForm doc=resource collection="Resources" id="newResourceFrom" type="update"}}
+      {{> afFieldLabel name="title"}}
+      {{> afFieldInput name="title" value=title}}
+
+      {{> afFieldLabel name="url"}}
+      {{> afFieldInput name="url" value=url }}
+
+      {{> afFieldLabel name="action"}}
+      {{> afFieldInput name="action" options=selectActionOptions}}
+
+      {{> afFieldLabel name="cost"}}
+      {{> afFieldInput name="cost" }}
+
+      {{> afFieldLabel name="course"}}
+      {{> afFieldInput name="course" options=selectCourseOptions firstOption="Select Course"}}
+
+      {{> afFieldLabel name="topic"}}
+      {{> afFieldInput name="topic" options=courseSubjectOptions firstOption="Select Subject"}}
+      <button type="submit">Update Resource</button>
+    {{/autoForm}}
+  {{/with}}
+  </section>
+</template>
+

@@ -1,0 +1,29 @@
+
+.grid-content {
+  float: left;
+}
+
+.item.item-grid {
+  width: 48.3%;
+  float: left;
+  min-height: 150px;
+  margin-left: 13px;
+  margin-bottom: 13px;
+}
+
+.item-grid:hover {
+  background: rgba(000,000,000,0.02);
+}
+
+.grid-item-header {
+  overflow: hidden;
+  margin-bottom: 10px;
+
+}
+.grid-item-content {
+}
+
+.item-title.grid-item-title {
+  margin-right: 10px;
+  width: 80%;
+}
