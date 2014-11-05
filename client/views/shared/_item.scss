@@ -1,11 +1,13 @@
 .item {
   overflow: hidden;
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.2);
   padding: 10px;
   padding-bottom: 9px;
   margin-bottom: 10px;
   border-radius: 2px;
+  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.2);
   transition: background 110ms ease;
+  // Force hardware acceleration.
+  transform: translate3d(0,0,0);
 }
 
 .course-content {
@@ -48,6 +50,7 @@
   width: 100%;
   overflow: hidden;
 }
+
 .item:hover {
   background: $purple;
   color: white;
@@ -64,6 +67,7 @@
   &:hover {
     cursor: pointer;
   }
+
 }
 .item-header {
   float: left;
