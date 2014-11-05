@@ -3,9 +3,12 @@ CoursesIndexController = RouteController.extend({
     courses: function() {
       var scope = Router.current().params.user;
       if (scope) {
-        return Courses.find({user: scope}, {sort: {title: 1}});
+        Meteor.subscribe('my_courses', scope);
+        return Courses.find({}, {sort: {title: 1}});
+      } else {
+         Meteor.subscribe('courses_index');
+        return Courses.find({}, {sort: {title: 1}});
       }
-      return Courses.find({}, {sort: {title: 1}});
     }
   },
 

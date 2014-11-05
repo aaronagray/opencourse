@@ -13,11 +13,7 @@ Router.map(function () {
 
   this.route('site.index', {path: '/'});
   this.route('courses.index', {
-    path: '/courses',
-    fastRender: true,
-    waitOn: function () {
-     return Meteor.subscribe('courses_index');
-    }
+    path: '/courses'
   });
   this.route('course.single', {path: 'course/:_id'});
 
