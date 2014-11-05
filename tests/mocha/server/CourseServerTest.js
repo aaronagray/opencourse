@@ -12,7 +12,8 @@ MochaWeb.testOnly(function(){
       Courses.insert({
         title: 'Mocha Test',
         description: 'This is a test from Mocha',
-        user: '1'
+        user: '1',
+        public: true
       });
 
       chai.assert(Courses.find().count() === 1);
@@ -21,8 +22,9 @@ MochaWeb.testOnly(function(){
     it("should require a user.", function(){
       chai.expect(function() {
         Courses.insert({
-          title: 'Face',
-          description: 'foo'
+          title: 'Foo',
+          description: 'Boo',
+          public: false
         });
       }).to.throw(Error);
     });
