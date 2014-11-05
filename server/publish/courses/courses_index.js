@@ -3,7 +3,7 @@
 /*****************************************************************************/
 
 Meteor.publish('courses_index', function () {
-  return Courses.find({});
+  return Courses.find({'public': true});
 });
 
 Meteor.publish('course', function(courseId) {
