@@ -1,11 +1,15 @@
 <template name="EditCourse">
   {{#with course}}
     <header class="page-header">
-        <h2 class="page-title">Edit {{title}}</h2>
+      <h2 class="page-title">Edit {{title}}</h2>
     </header>
+    <section class="column half">
+      {{#autoForm doc=course collection="Courses" id="editCourseFrom" type="update"}}
+        {{> afQuickField name="title"}}
+        {{> afQuickField name="description"}}
+        {{> afQuickField name="public"}}
+        <button type="submit" class="btn">Update Course</button>
+      {{/autoForm}}
+    </section>
   {{/with}}
-  <section class="item-form">
-    Edit coming soon.
-  </section>
 </template>
-

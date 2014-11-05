@@ -1,7 +1,7 @@
 <template name="ResourcesIndex">
   <header class="page-header">
-      <h2 class="page-title">Resources</h2>
-      <a class="button" href="{{pathFor 'new.resource'}}">Add Resource</a>
+    <h2 class="page-title">Resources</h2>
+    <a class="button" href="{{pathFor 'new.resource'}}">Add Resource</a>
   </header>
   <aside class="column fourth last">
     <h2>About Resources</h2>
@@ -18,7 +18,9 @@
       <div class="item-content">
           {{#if hasPrivs . }}
             <div class="item-controls">
-              <a class="action" href="{{pathFor 'edit.resource'}}"><i class="fa fa-edit">Edit</i></a>
+              <a class="action" href="{{pathFor 'edit.resource'}}">
+                <i class="fa fa-edit">Edit</i>
+              </a>
               <i class="fa fa-close" data-action="remove" data-item="{{_id}}" data-type="resource">Delete</i>
             </div>
           {{/if}}

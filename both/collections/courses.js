@@ -5,6 +5,10 @@ Courses.attachSchema(new SimpleSchema({
     type: String,
     label: 'Title'
   },
+  public: {
+    label: 'Public',
+    type: Boolean
+  },
   'tax.category': {
     type: String,
     label: 'Category',
