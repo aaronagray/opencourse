@@ -1,5 +1,7 @@
 Template.MasterLayout.events({
-  'click [data-action="remove"]': function(e) {
+  'click main [data-action="remove"]': function(e) {
+    // Flexible data atrributes to remove
+    // different kinds of items.
     var item = $(e.target).data('item');
     var type = $(e.target).data('type');
     if (type === 'resource')  Resources.remove(item);

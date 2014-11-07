@@ -1,6 +1,5 @@
 <template name="ResourceSingle">
   {{#with resource}}
-
     <header class="page-header">
       <i class="kind fa fa-{{action}}"></i>
       <h1 class="page-title">{{title}}</h1>
@@ -12,8 +11,7 @@
       <p>Cost: {{cost}}</p>
     </aside>
 
-    <section class="column half">
-
+    <main class="column half">
       {{#if isVideo}}
         <article class="video-container">
           {{#if isYouTube}}
@@ -24,10 +22,8 @@
           {{/if}}
         </article>
       {{/if}}
-
-      {{>disqus}}
-
-    </section>
+      {{> disqus}}
+    </main>
   {{/with}}
 </template>
 

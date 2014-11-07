@@ -27,23 +27,22 @@
   </aside>
   {{/with}}
 
-  <section class="course-resources column half">
-  {{#momentum plugin='growl'}}
-    {{#each courseResources}}
-    <article class="resource item {{#if complete}} completed {{/if}}">
-      <div class="item-content">
-        {{#if hasPrivs . }}
-          {{#if complete }}
-            <button class="undo-action" data-resource="{{_id}}">Undo</button>
-          {{else}}
-            <button class="complete-action" data-resource="{{_id}}">Complete</button>
-          {{/if}}
-        {{/if}}
-        <div class="item-controls">
+  <main class="course-resources column half">
+   {{#each courseResources}}
+     <article class="resource item {{#if complete}} completed {{/if}}">
+        <div class="item-content">
           {{#if hasPrivs . }}
-            <a href="{{pathFor 'edit.resource'}}"><i class="fa fa-edit"></i></a>
-            <i class="fa fa-close" data-action="remove" data-item="{{_id}}" data-type="resource"></i>
+            {{#if complete }}
+              <button class="undo-action" data-resource="{{_id}}">Undo</button>
+            {{else}}
+              <button class="complete-action" data-resource="{{_id}}">Complete</button>
+            {{/if}}
           {{/if}}
+          <div class="item-controls">
+            {{#if hasPrivs . }}
+              <a href="{{pathFor 'edit.resource'}}"><i class="fa fa-edit"></i></a>
+              <i class="fa fa-close" data-action="remove" data-item="{{_id}}" data-type="resource"></i>
+            {{/if}}
           </div>
           <i class="kind fa fa-{{action}}"></i>
           <a href="{{pathFor 'resource.single'}}"><h2 class="item-title">{{title}}</h2></a>
@@ -52,8 +51,7 @@
           {{/if}}
         </div>
       </article>
-      {{/each}}
-    {{/momentum}}
-  </section>
+    {{/each}}
+  </main>
 </template>
 
