@@ -4,7 +4,8 @@
 /* DashNav: Event Handlers and Helpersss .js*/
 /*****************************************************************************/
 Template.DashNav.events({
-  'load': function (e, tmpl) {
+  'click [data-nav="private-courses"]': function (e, tmpl) {
+    Session.set('my_courses', true);
   },
 });
 

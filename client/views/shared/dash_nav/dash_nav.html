@@ -8,10 +8,10 @@
         {{/if}}
       {{> loginButtons}}
       <nav class="dash-nav-buttons">
-        <a href="{{pathFor 'courses.index'}}/?user={{userId}}" class="button button-dash" >
+        <a data-nav="private-courses" href="{{pathFor 'courses.index'}}" class="button button-dash" >
           <h3>My Courses</h3>
         </a>
-        <a href="{{pathFor 'resources.index'}}/?user={{userId}}" class="button button-dash" >
+        <a href="{{pathFor 'resources.index'}}" class="button button-dash" >
           <h3>My Resources</h3>
         </a>
       </nav>

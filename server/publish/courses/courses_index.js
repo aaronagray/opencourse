@@ -7,7 +7,7 @@ Meteor.publish('courses_index', function () {
 });
 
 Meteor.publish('my_courses', function (scope) {
-  return Courses.find({'user': this.userId});
+  return Courses.find({'user': this.userId}, {sort: {title: 1}});
 });
 
 Meteor.publish('course', function(courseId) {

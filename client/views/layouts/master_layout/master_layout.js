@@ -4,6 +4,9 @@ Template.MasterLayout.events({
     var type = $(e.target).data('type');
     if (type === 'resource')  Resources.remove(item);
     if (type === 'course')    Courses.remove(item);
+  },
+  'click [data-nav="public-courses"]': function() {
+    Session.set('my_courses', false);
   }
 });
 
